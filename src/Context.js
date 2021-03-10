@@ -3,8 +3,8 @@ import { useState, createContext } from 'react'
 export const GlobalContext = createContext()
 
 export const GlobalProvider = (props) => {
-  const [user, setUser] = useState(
-    [
+  const [globalState, setGlobalState] = useState({
+    users: [
       {
         "id": 1,
         "company": "Photosnap",
@@ -155,11 +155,12 @@ export const GlobalProvider = (props) => {
         "languages": ["JavaScript"],
         "tools": ["React", "Sass"]
       }
-    ]
-  )
+    ],
+    filteredUsers: [],
+  })
 
   return (
-    <GlobalContext.Provider>
+    <GlobalContext.Provider value={[globalState, setGlobalState]}>
       {props.children}
     </GlobalContext.Provider>
   )
