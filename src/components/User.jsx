@@ -29,10 +29,10 @@ export default function User(user) {
         <button className='skill__tag'>{role}</button>
         <button className='skill__tag'>{level}</button>
         {languages.map((lenguage) => (
-          <button className='skill__tag'>{lenguage}</button>
+          <button key={lenguage} className='skill__tag'>{lenguage}</button>
         ))}
         {tools.map((tool) => (
-          <button className='skill__tag'>{tool}</button>
+          <button key={tool} className='skill__tag'>{tool}</button>
         ))}
       </div>
     </div>

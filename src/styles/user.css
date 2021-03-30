@@ -1,7 +1,7 @@
 .feattered, .user{
   display: block;
   padding: 0 18px;
-  height: 235px;
+  height: 215px;
   border-radius: 6px;
   width: 220px;
   box-shadow: 1px 1px 20px hsl(180deg 29% 50% / 30%);
@@ -63,19 +63,32 @@ small{
   color: var(--DarkGrayishCyan);
 }
 
-.skills{
-  border-top: 1px solid  rgb(206, 206, 206);
-  width: 100%;
-  bottom: 50px;
-  height: 80px;
-  justify-content: start;
-  flex-wrap: wrap;
-}
-
 .position{
   position: relative;
   bottom: 40px;
   font-weight: 800;
   font-size: 13px;
   color: var(--VeryDarkGrayishCyan);
+}
+
+.skills{
+  border-top: 1px solid  rgb(206, 206, 206);
+  width: 100%;
+  bottom: 50px;
+  height: 5em;
+  justify-content: start;
+  flex-wrap: wrap;
+}
+
+.skill__tag{
+  background-color: #e3f1f1;
+  border: none;
+  margin: 0 0.3em;
+  color: hsl(180deg 29% 50%);
+  font-weight: 800;
+  cursor: pointer;
+  font-size: 12px;
+  letter-spacing: 1px;
+  padding: 4px;
+  border-radius: 3px;
 }
