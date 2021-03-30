@@ -1,7 +1,9 @@
 .feattered, .user{
   display: block;
   padding: 0 18px;
+  height: 235px;
   border-radius: 6px;
+  width: 220px;
   box-shadow: 1px 1px 20px hsl(180deg 29% 50% / 30%);
 }
 
@@ -14,12 +16,13 @@
 }
 
 .user__logo{
-  width: 3.5em;
+  width: 3em;
 }
 
 small{
   color: var(--DesaturatedDarkCyan);
   font-weight: 900;
+  font-size: 12px;
 }
 
 .company__conatiner, .data, .skills{
@@ -32,7 +35,7 @@ small{
 }
 
 .new{
-  font-size: 12px;
+  font-size: 9px;
   margin: 0;
   background-color: var(--DesaturatedDarkCyan);
   padding: 7px 6px 3px;
@@ -43,7 +46,7 @@ small{
 }
 
 .featured{
-  font-size: 11px;
+  font-size: 9px;
   border-radius: 12px;
   background-color: black;
   color: #fff;
@@ -56,11 +59,23 @@ small{
   font-size: 10px;
   text-align: start;
   position: relative;
-  bottom: 30px;
+  bottom: 55px;
   color: var(--DarkGrayishCyan);
 }
 
 .skills{
   border-top: 1px solid  rgb(206, 206, 206);
   width: 100%;
+  bottom: 50px;
+  height: 80px;
+  justify-content: start;
+  flex-wrap: wrap;
+}
+
+.position{
+  position: relative;
+  bottom: 40px;
+  font-weight: 800;
+  font-size: 13px;
+  color: var(--VeryDarkGrayishCyan);
 }

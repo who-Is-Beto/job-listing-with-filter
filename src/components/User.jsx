@@ -16,13 +16,25 @@ export default function User(user) {
         {novo && <p className='new'>NEW!</p>}
         {featured && <p className='featured'>FEATURED</p>}
       </div>
+      <div className="position">
+        <p>{position}</p>
+      </div>
       <div className="data">
         <p className='days'>{postedAt}</p>
         <p className='contarct'>{contract}</p>
         <p className='location'>{location}</p>
       </div>
 
-      <div className="skills"></div>
+      <div className="skills">
+        <button className='skill__tag'>{role}</button>
+        <button className='skill__tag'>{level}</button>
+        {languages.map((lenguage) => (
+          <button className='skill__tag'>{lenguage}</button>
+        ))}
+        {tools.map((tool) => (
+          <button className='skill__tag'>{tool}</button>
+        ))}
+      </div>
     </div>
   )
 }

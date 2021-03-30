@@ -9,6 +9,7 @@
 body {
   background-color: var(--LightGrayishCyanBackground);
   margin: 0;
+  box-sizing: border-box;
   font-family: 'Spartan', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
