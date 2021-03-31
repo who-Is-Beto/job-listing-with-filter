@@ -1,4 +1,5 @@
-import { useState, createContext } from 'react'
+import { useState, createContext, useReducer } from 'react'
+import storeReducer from './reducers/reducer'
 
 export const GlobalContext = createContext()
 
@@ -156,11 +157,14 @@ export const GlobalProvider = (props) => {
         "tools": ["React", "Sass"]
       }
     ],
+    characteristics: [],
     filteredUsers: [],
   })
 
+  const [store, dispatch] = useReducer(storeReducer, globalState)
+
   return (
-    <GlobalContext.Provider value={[globalState, setGlobalState]}>
+    <GlobalContext.Provider value={[store, dispatch]}>
       {props.children}
     </GlobalContext.Provider>
   )

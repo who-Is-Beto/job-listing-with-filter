@@ -1,10 +1,19 @@
+import { useContext } from 'react'
+import { GlobalContext } from '../Context'
 import '../styles/user.css'
+import { types } from '../reducers/reducer'
 
 export default function User(user) {
   const { company, logo, featured, level, novo, position, role,
     postedAt, contract, location, languages, tools } = user.user
 
-  console.log(logo)
+  const [store, dispatch] = useContext(GlobalContext)
+  const { characteristics } = store
+
+  const handleClick = (id) => {
+    dispatch({ type: types.addFilter, payload: id })
+  }
+
 
   return (
     <div className={featured ? "feattered" : "user"}>
@@ -21,18 +30,20 @@ export default function User(user) {
       </div>
       <div className="data">
         <p className='days'>{postedAt}</p>
+        <span>•</span>
         <p className='contarct'>{contract}</p>
+        <span>•</span>
         <p className='location'>{location}</p>
       </div>
 
       <div className="skills">
-        <button className='skill__tag'>{role}</button>
-        <button className='skill__tag'>{level}</button>
+        <button onClick={() => handleClick(role)} className='skill__tag'>{role}</button>
+        <button onClick={() => handleClick(level)} className='skill__tag'>{level}</button>
         {languages.map((lenguage) => (
-          <button key={lenguage} className='skill__tag'>{lenguage}</button>
+          <button onClick={() => handleClick(lenguage)} key={lenguage} className='skill__tag'>{lenguage}</button>
         ))}
         {tools.map((tool) => (
-          <button key={tool} className='skill__tag'>{tool}</button>
+          <button onClick={() => handleClick(tool)} key={tool} className='skill__tag'>{tool}</button>
         ))}
       </div>
     </div>

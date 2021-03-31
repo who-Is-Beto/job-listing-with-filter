@@ -19,6 +19,23 @@
   width: 3em;
 }
 
+.user{
+  height: 190px;
+}
+
+.user .company__conatiner{
+  text-align: start;
+  justify-content: start;
+}
+
+.user .company__conatiner small{
+  margin-right: 12px;
+}
+
+.user .user__logo{
+  transform: translateY(-5px);
+}
+
 small{
   color: var(--DesaturatedDarkCyan);
   font-weight: 900;
@@ -29,7 +46,7 @@ small{
   position: relative;
   bottom: 30px;
   display: flex;
-  width: 87%;
+  width: 94%;
   align-items: center;
   justify-content: space-around;
 }
@@ -47,6 +64,7 @@ small{
 
 .featured{
   font-size: 9px;
+  font-weight: 800;
   border-radius: 12px;
   background-color: black;
   color: #fff;
@@ -54,8 +72,7 @@ small{
 }
 
 .data{
-  display: grid;
-  grid-template-columns: 40px 55px 60px;
+  width: 85%;
   font-size: 10px;
   text-align: start;
   position: relative;
@@ -68,6 +85,7 @@ small{
   bottom: 40px;
   font-weight: 800;
   font-size: 13px;
+  letter-spacing: 0px;
   color: var(--VeryDarkGrayishCyan);
 }
 
@@ -85,10 +103,14 @@ small{
   border: none;
   margin: 0 0.3em;
   color: hsl(180deg 29% 50%);
-  font-weight: 800;
+  font-weight: 700;
   cursor: pointer;
-  font-size: 12px;
+  font-size: 13px;
   letter-spacing: 1px;
   padding: 4px;
   border-radius: 3px;
+}
+
+button{
+  transition-duration: .5s;
 }
