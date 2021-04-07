@@ -4,7 +4,7 @@ import storeReducer from './reducers/reducer'
 export const GlobalContext = createContext()
 
 export const GlobalProvider = (props) => {
-  const [globalState, setGlobalState] = useState({
+  const [globalState] = useState({
     users: [
       {
         "id": 1,

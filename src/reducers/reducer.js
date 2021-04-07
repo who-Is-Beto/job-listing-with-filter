@@ -7,9 +7,18 @@ const types = {
 const storeReducer = (state, action) => {
   switch (action.type) {
 
-    case types.addFilter: return {
-      ...state,
-      characteristics: [...state.characteristics, action.payload]
+    case types.addFilter: {
+
+      if (state.characteristics.includes(action.payload)) {
+        return {
+          ...state,
+        }
+      } else {
+        return {
+          ...state,
+          characteristics: [...state.characteristics, action.payload]
+        }
+      }
     }
 
     default: return {

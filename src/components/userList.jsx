@@ -14,7 +14,7 @@ export default function UserList() {
     <section className="user__list-wrapper">
       <div className="user__list-elemets">
 
-        {/* characteristics <= 0 &&  */users.map((user) => (
+        {users.map((user) => (
           <User key={user.id} user={user} />
         )
         )}

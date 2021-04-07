@@ -7,13 +7,13 @@ export default function User(user) {
   const { company, logo, featured, level, novo, position, role,
     postedAt, contract, location, languages, tools } = user.user
 
-  const [store, dispatch] = useContext(GlobalContext)
-  const { characteristics } = store
+  const [, dispatch] = useContext(GlobalContext)
 
-  const handleClick = (id) => {
-    dispatch({ type: types.addFilter, payload: id })
+  const handleClick = (characteristic) => {
+    dispatch({
+      type: types.addFilter, payload: characteristic
+    })
   }
-
 
   return (
     <div className={featured ? "feattered" : "user"}>
